@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorMidnightBlue">#19227C</color>
+    <color name="colorGovernorBay">#4B57A5</color>
+    <color name="colorSnow">#FAFAFA</color>
+    <color name="colorManatee">#90929E</color>
+    <color name="colorQuartz">#DADADC</color>
+    <color name="colorWildBlue">#7581C4</color>
+</resources>

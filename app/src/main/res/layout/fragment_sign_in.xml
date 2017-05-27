@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tonto.demoretrofit.fragment.SignIn">
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_person_black_24dp" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_username"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_lock_black_24dp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:inputType="textPassword"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_username"
+                android:hint="Password" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layout_remember"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cb_remember"
+                android:src="@drawable/ic_checkbox_selector"
+                android:onClick="savePreference"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:text="Remember account?"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+          <TextView
+              android:id="@+id/tv_sign_up"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/layout_remember"
+              android:layout_centerInParent="true"
+              android:layout_marginTop="64dp"
+              android:text="Don't have an account?" />
+
+        <Button
+            android:id="@+id/bt_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sign_up"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:text="sign up"
+            android:textColor="@color/colorGovernorBay" />
+
+        <Button
+            android:id="@+id/bt_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_sign_up"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorWildBlue"
+            android:text="sign in"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</FrameLayout>
