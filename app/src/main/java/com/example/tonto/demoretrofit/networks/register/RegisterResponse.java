@@ -1,16 +1,18 @@
-package com.example.tonto.demoretrofit.networks;
+package com.example.tonto.demoretrofit.networks.register;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by tonto on 5/26/2017.
+ * Created by tonto on 5/23/2017.
  */
 
-public class LoginResponse {
+public class RegisterResponse {
+
     @SerializedName("access_token")
     private String accessToken;
 
-    public LoginResponse(String accessToken) {
+    public RegisterResponse(String accessToken) {
         this.accessToken = accessToken;
     }
 

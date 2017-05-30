@@ -1,4 +1,7 @@
-package com.example.tonto.demoretrofit.networks;
+package com.example.tonto.demoretrofit.networks.register;
+
+import com.example.tonto.demoretrofit.networks.register.RegisterRequest;
+import com.example.tonto.demoretrofit.networks.register.RegisterResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

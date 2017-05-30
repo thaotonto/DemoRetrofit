@@ -1,4 +1,4 @@
-package com.example.tonto.demoretrofit.networks;
+package com.example.tonto.demoretrofit.networks.register;
 
 /**
  * Created by tonto on 5/23/2017.

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,19 +15,14 @@ import android.widget.Toast;
 
 import com.example.tonto.demoretrofit.MainActivity;
 import com.example.tonto.demoretrofit.R;
-import com.example.tonto.demoretrofit.networks.LoginRequest;
-import com.example.tonto.demoretrofit.networks.LoginResponse;
-import com.example.tonto.demoretrofit.networks.LoginService;
-import com.example.tonto.demoretrofit.networks.RegisterRequest;
-import com.example.tonto.demoretrofit.networks.RegisterResponse;
-import com.example.tonto.demoretrofit.networks.RegisterService;
+import com.example.tonto.demoretrofit.networks.login.LoginRequest;
+import com.example.tonto.demoretrofit.networks.login.LoginResponse;
+import com.example.tonto.demoretrofit.networks.login.LoginService;
 import com.example.tonto.demoretrofit.networks.RetrofitFactory;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
@@ -124,8 +118,9 @@ public class SignIn extends Fragment {
                         public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                             if (response.code() == 200) {
                                 LoginResponse loginResponse = response.body();
-                                System.out.println(loginResponse.getAccessToken());
-                                Toast.makeText(getActivity(), "You are in", Toast.LENGTH_SHORT).show();
+                                AllTasksFragment allTasksFragment = new AllTasksFragment();
+                                allTasksFragment.setAccessToken("JWT " + loginResponse.getAccessToken());
+                                ((MainActivity) getActivity()).changeScreen(allTasksFragment, true);
                             } else if (response.code() == 401) {
                                 Toast.makeText(getActivity(), "Username or password is wrong!", Toast.LENGTH_SHORT).show();
                             }

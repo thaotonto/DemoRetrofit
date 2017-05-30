@@ -1,4 +1,7 @@
-package com.example.tonto.demoretrofit.networks;
+package com.example.tonto.demoretrofit.networks.login;
+
+import com.example.tonto.demoretrofit.networks.login.LoginRequest;
+import com.example.tonto.demoretrofit.networks.login.LoginResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

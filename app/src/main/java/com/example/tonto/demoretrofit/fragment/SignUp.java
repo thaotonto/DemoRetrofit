@@ -3,7 +3,6 @@ package com.example.tonto.demoretrofit.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,9 @@ import android.widget.Toast;
 
 import com.example.tonto.demoretrofit.MainActivity;
 import com.example.tonto.demoretrofit.R;
-import com.example.tonto.demoretrofit.networks.RegisterRequest;
-import com.example.tonto.demoretrofit.networks.RegisterResponse;
-import com.example.tonto.demoretrofit.networks.RegisterService;
+import com.example.tonto.demoretrofit.networks.register.RegisterRequest;
+import com.example.tonto.demoretrofit.networks.register.RegisterResponse;
+import com.example.tonto.demoretrofit.networks.register.RegisterService;
 import com.example.tonto.demoretrofit.networks.RetrofitFactory;
 
 import retrofit2.Call;
@@ -77,7 +76,6 @@ public class SignUp extends Fragment {
                     .enqueue(new Callback<RegisterResponse>() {
                         @Override
                         public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                            System.out.println(response.code());
                             if (response.code() == 200 || response.code() == 307) {
                                 Toast.makeText(getActivity(), "Your account is ready!", Toast.LENGTH_SHORT).show();
                                 ((MainActivity) getActivity())
